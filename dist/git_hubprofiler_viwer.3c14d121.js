@@ -18523,64 +18523,94 @@ var _s = $RefreshSig$();
 function Body() {
     _s();
     const [profile, setprofile] = (0, _react.useState)([]);
-    async function generateprofile() {
-        const response = await fetch("https://api.github.com/users?per_page=10");
+    const [num, setnum] = (0, _react.useState)("");
+    console.log(profile);
+    async function generateprofile(count) {
+        const ran = Math.floor(Math.random() * 1000 + 1);
+        const response = await fetch(`https://api.github.com/users?since=${ran}&per_page=${count}`);
         const data = await response.json();
         setprofile(data);
     }
     (0, _react.useEffect)(()=>{
-        generateprofile();
+        generateprofile(10);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "but",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "profiles",
-            children: profile.map((value)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "cards",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: value.avatar_url
-                        }, void 0, false, {
-                            fileName: "components/body.js",
-                            lineNumber: 29,
-                            columnNumber: 37
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            children: value.login
-                        }, void 0, false, {
-                            fileName: "components/body.js",
-                            lineNumber: 30,
-                            columnNumber: 37
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: value.html_url,
-                            target: "_blank",
-                            children: "Profile"
-                        }, void 0, false, {
-                            fileName: "components/body.js",
-                            lineNumber: 31,
-                            columnNumber: 37
-                        }, this)
-                    ]
-                }, value.id, true, {
-                    fileName: "components/body.js",
-                    lineNumber: 28,
-                    columnNumber: 38
-                }, this);
-            })
-        }, void 0, false, {
-            fileName: "components/body.js",
-            lineNumber: 24,
-            columnNumber: 15
-        }, this)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "but",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "inpu",
+                        placeholder: "seaarch here",
+                        value: num,
+                        onChange: (e)=>setnum(e.target.value)
+                    }, void 0, false, {
+                        fileName: "components/body.js",
+                        lineNumber: 22,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>generateprofile(Number(num)),
+                        children: "Search Profile"
+                    }, void 0, false, {
+                        fileName: "components/body.js",
+                        lineNumber: 23,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/body.js",
+                lineNumber: 21,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "profiles",
+                children: profile.map((value)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cards",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: value.avatar_url
+                            }, void 0, false, {
+                                fileName: "components/body.js",
+                                lineNumber: 29,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                children: value.login
+                            }, void 0, false, {
+                                fileName: "components/body.js",
+                                lineNumber: 30,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: value.html_url,
+                                target: "_blank",
+                                children: "Profile"
+                            }, void 0, false, {
+                                fileName: "components/body.js",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, value.id, true, {
+                        fileName: "components/body.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this))
+            }, void 0, false, {
+                fileName: "components/body.js",
+                lineNumber: 26,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "components/body.js",
-        lineNumber: 18,
-        columnNumber: 11
+        lineNumber: 19,
+        columnNumber: 3
     }, this);
 }
-_s(Body, "06Oq3yEJMrC1t15UFDRRKJkdCQA=");
+_s(Body, "Wl/IAltqUW0mPsxIHjlp1jx0v7I=");
 _c = Body;
 exports.default = Body;
 var _c;
