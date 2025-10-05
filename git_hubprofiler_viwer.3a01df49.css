@@ -1,0 +1,77 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#heading {
+  background-color: #7a7af7;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  display: flex;
+}
+
+h1 {
+  color: #f0f8ff;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.profiles {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+.cards {
+  text-align: center;
+  border: 2px solid #000;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 20px 10px;
+}
+
+.but {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  display: flex;
+}
+
+input {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-size: 25px;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #7a7af7;
+  border: none;
+  border-radius: 4px;
+  height: 44px;
+  padding: 0 15px;
+}
+
+button:hover {
+  background-color: #6464dc;
+}
+/*# sourceMappingURL=git_hubprofiler_viwer.3a01df49.css.map */
