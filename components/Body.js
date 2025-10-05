@@ -19,7 +19,7 @@ return (
   <div>
 
     <div className="but">
-      <input type="text" className="inpu" placeholder="seaarch here" value={num} onChange={(e)=>setnum(e.target.value)}/>
+      <input type="text" className="inpu" placeholder="search here" value={num} onChange={(e)=>setnum(e.target.value)}/>
       <button onClick={()=>generateprofile(Number(num))}>Search Profile</button>
     </div>
 
